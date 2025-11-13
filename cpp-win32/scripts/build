@@ -2,9 +2,9 @@
 
 set -o errexit
 
-rm --recursive --force local/build
-mkdir --parents        local/build
-cd                     local/build
+rm --recursive --force /a/local/build
+mkdir --parents        /a/local/build
+cd                     /a/local/build
 
 # clang
 
