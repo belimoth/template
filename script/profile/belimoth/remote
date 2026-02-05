@@ -1,0 +1,8 @@
+#!/bin/bash
+
+set -o errexit
+
+git remote rm                   origin
+git remote add                  origin git@github.com:subhelion/template.git
+git remote set-url --add --push origin git@github.com:subhelion/template.git
+git remote set-url --add --push origin git@github.com:belimoth/template.git

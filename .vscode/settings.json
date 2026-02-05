@@ -1,0 +1,7 @@
+{
+	"C_Cpp.autocomplete": "disabled",
+	"C_Cpp.codeFolding": "disabled",
+	"editor.maxTokenizationLineLength": 0,
+	"editor.semanticHighlighting.enabled": false,
+	"C_Cpp.enhancedColorization": "disabled"
+}
