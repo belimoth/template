@@ -1,0 +1,5 @@
+#!/bin/bash
+
+scripts/activate
+python --version > runtime.txt
+pip freeze       > requirements-full.txt
