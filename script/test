@@ -1,0 +1,18 @@
+#!/bin/bash
+
+test() {
+	echo testing $1
+	pushd $1 > /dev/null
+
+	MSYS_NO_PATHCONV=1 subst /d a: | true && subst a: .
+
+	script/clean
+
+	script/build
+
+	script/run
+
+	popd > /dev/null
+}
+
+test $@
