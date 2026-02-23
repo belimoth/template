@@ -1,0 +1,19 @@
+#!/bin/bash
+
+[[ $( command -v vcpkg ) ]] || {
+	[[ -d local/vcpkg ]] || {
+		echo "installing vcpkg"
+		git clone git@github.com:microsoft/vcpkg.git local/vcpkg && cd $_
+		bootstrap-vcpkg.sh -disableMetrics
+	}
+
+	export PATH=$(pwd)/local/vcpkg:$PATH
+}
+
+#
+
+[[ $( command -v vcpkg ) ]] || { export PATH=$(pwd)/local/vcpkg:$PATH; [[ $( command -v vcpkg ) ]] || { echo "error: vcpkg required"; exit 1; }; }
+
+#
+
+vcpkg install --triplet x64-windows-static imgui[win32-binding,dx11-binding]
