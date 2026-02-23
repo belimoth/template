@@ -1,0 +1,8 @@
+#!/bin/bash
+
+rm --recursive --force /a/local/vcpkg
+cd /a/local
+git clone https://github.com/microsoft/vcpkg.git --depth 1
+rm --recursive --force /a/local/vcpkg/.git
+cd vcpkg
+./bootstrap-vcpkg.sh

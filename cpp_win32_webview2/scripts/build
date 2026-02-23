@@ -1,0 +1,16 @@
+#!/bin/bash
+
+set -o errexit
+
+[[ $SHLVL -gt 2 ]] || clear
+
+#
+
+echo "building..."
+
+#
+
+mkdir --parents /a/local/build && cd $_
+source use-msvc.sh
+rc -nologo -fo app.res /a/source/app.rc
+cl @/a/build-flags

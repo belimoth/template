@@ -1,0 +1,23 @@
+#!/bin/bash
+
+set -o errexit
+
+[[ $SHLVL -gt 2 ]] || clear
+
+#
+
+echo "running..."
+
+#
+
+rm --recursive --force /a/local/run
+mkdir --parents $_
+cd $_
+
+#
+
+# ln --symbolic /a/bin/cpprest141_2_10.dll .
+
+#
+
+/a/local/build/app.exe "$@"

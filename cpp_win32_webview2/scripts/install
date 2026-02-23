@@ -1,0 +1,5 @@
+#!/bin/bash
+
+vcpkg install --triplet x64-windows-static cpprestsdk
+vcpkg install --triplet x64-windows-static wil
+vcpkg install --triplet x64-windows-static webview2
