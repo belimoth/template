@@ -6,11 +6,10 @@ test() {
 
 	MSYS_NO_PATHCONV=1 subst /d a: | true && subst a: .
 
-	script/clean
-
-	script/build
-
-	script/run
+	[[ -f "script/clean"   ]] && script/clean
+#	[[ -f "script/install" ]] && script/install
+	[[ -f "script/build"   ]] && script/build
+	[[ -f "script/run"     ]] && script/run
 
 	popd > /dev/null
 }
