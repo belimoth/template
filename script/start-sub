@@ -1,0 +1,15 @@
+#!/bin/bash
+
+start() {
+	echo testing $1
+	pushd $1 > /dev/null
+
+	[[ -f "script/start"   ]] && script/start
+#	[[ -f "script/install" ]] && script/install
+#	[[ -f "script/build"   ]] && script/build
+#	[[ -f "script/run"     ]] && script/run
+
+	popd > /dev/null
+}
+
+start $@
