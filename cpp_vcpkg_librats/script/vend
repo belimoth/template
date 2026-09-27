@@ -1,0 +1,18 @@
+#!/bin/bash
+
+set -o errexit
+
+rm --recursive --force /a/vend
+
+mkdir --parents /a/vend/lib
+mkdir --parents /a/vend/share
+mkdir --parents /a/vend/source
+mkdir --parents /a/vend/include
+
+pushd /a/local/vcpkg/installed/x64-windows-static > /dev/null
+
+cp --parents             share/librats/copyright /a/vend
+cp --parents             lib/rats.lib            /a/vend
+cp --parents --recursive include/librats         /a/vend
+
+popd > /dev/null

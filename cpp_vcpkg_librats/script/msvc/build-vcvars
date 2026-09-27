@@ -1,0 +1,6 @@
+#!/bin/bash
+
+mkdir --parents /a/local/msvc
+cd $_
+env -u PATH > before.txt
+MSYS_NO_PATHCONV=1 cmd /c "msvc.bat && bash build-vcvars-continue"

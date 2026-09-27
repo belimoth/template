@@ -1,0 +1,9 @@
+#!/bin/bash
+
+set -o errexit
+
+rm --recursive --force /a/local/run
+mkdir --parents        /a/local/run
+cd                     /a/local/run
+
+/a/local/build/main.exe

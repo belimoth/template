@@ -1,0 +1,22 @@
+#!/bin/bash
+
+env -u PATH > after.txt
+
+diff -u before.txt after.txt \
+	| tail -n +5             \
+	| grep '^\+'             \
+	| sed -E 's/^\+//'       \
+	| sed -E 's/\\/\\\\/g'   \
+	| sed -E 's/\$/\\\$/g'   \
+	| sed -E 's/=/="/'       \
+	| sed -E 's/$/"/'        \
+	| sed '/^!/d'            \
+	> /a/local/msvc/vcvars.env
+
+echo $PATH                    \
+	| tr ":" "\n"             \
+	| sed '/\/mingw64\/bin/Q' \
+	| tr "\n" ":"             \
+	> /a/local/msvc/vcvars-path.txt
+
+exit
