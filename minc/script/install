@@ -1,0 +1,5 @@
+#!/bin/bash
+
+powershell -c "irm minc.dev/install.ps1 | iex"
+
+# curl -fsSL https://minc.dev/install | bash
