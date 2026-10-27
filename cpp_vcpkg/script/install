@@ -1,7 +1,0 @@
-#!/bin/bash
-
-set -o errexit
-
-[[ -d /a/local/vcpkg ]] || git clone git@github.com:microsoft/vcpkg.git /a/local/vcpkg && cd $_ && ./bootstrap-vcpkg.sh -disableMetrics
-
-vcpkg install fmt

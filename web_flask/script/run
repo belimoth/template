@@ -1,9 +1,0 @@
-#!/bin/bash
-
-script/activate
-
-cd source/app
-
-export FLASK_APP=app
-export FLASK_DEBUG=1
-flask run

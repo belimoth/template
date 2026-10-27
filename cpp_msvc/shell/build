@@ -1,0 +1,10 @@
+#!/bin/bash
+
+set -o errexit
+
+rm --recursive --force /a/null/build
+mkdir --parents        /a/null/build
+cd                     /a/null/build
+
+source /a/shell/msvc/msvc.sh
+cl a:/source/main.cpp -nologo -GR- -Wall -WX -link -entry:mainCRTStartup -out:main.exe

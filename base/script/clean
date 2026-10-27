@@ -1,5 +1,0 @@
-#!/bin/bash
-
-rm --recursive --force local
-mkdir local
-touch local/.gitkeep

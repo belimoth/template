@@ -1,0 +1,5 @@
+#!/bin/bash
+
+rm --recursive --force null
+mkdir null
+touch null/.gitkeep

@@ -1,7 +1,0 @@
-#!/bin/bash
-
-set -o errexit
-
-rm --recursive --force /a/local
-mkdir /a/local
-touch /a/local/.gitkeep

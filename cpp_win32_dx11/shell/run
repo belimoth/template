@@ -1,0 +1,9 @@
+#!/bin/bash
+
+set -o errexit
+
+rm --recursive --force /a/null/run
+mkdir --parents        /a/null/run
+cd                     /a/null/run
+
+/a/null/build/main.exe

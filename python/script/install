@@ -5,7 +5,7 @@
 [[ $( python -c "import sys; print( sys.version_info[0] )" ) == "3" ]] || { echo "error: python 3 not installed"; exit 1; }
 [[ $( python --version ) == $( cat runtime.txt )                    ]] || { echo "warning: python version mismatch"; }
 
-python -m venv local/venv
-script/activate
+python -m venv null/venv
+shell/activate
 python -m pip install --upgrade pip
 pip install --requirement requirements-full.txt

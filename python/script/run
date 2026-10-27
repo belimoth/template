@@ -1,4 +1,4 @@
 #!/bin/bash
 
-script/activate
+shell/activate
 python main.py

@@ -9,7 +9,7 @@
 - [Visual Studio Code](https://code.visualstudio.com/)
 - Bash (included in [Git for Windows](https://gitforwindows.org))
 
-### Optional development tools (scripts)
+### Optional development tools (shell)
 - [ShellCheck](https://www.shellcheck.net)
 
 ### Optional development tools (cpp)
@@ -29,7 +29,7 @@
 - cpp_win32_nocrt
 ```
 
-### Scripts (WIP)
+### shell (WIP)
 
 ```sh
 # (re)start code with tools
@@ -41,7 +41,7 @@ vcpkg
 # install dependencies with vcpkg
 install
 
-# rebuild local/vend
+# rebuild null/vend
 vend
 
 # building

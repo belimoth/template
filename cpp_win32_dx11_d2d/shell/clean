@@ -1,0 +1,7 @@
+#!/bin/bash
+
+set -o errexit
+
+rm --recursive --force /a/null
+mkdir /a/null
+touch /a/null/.gitkeep
