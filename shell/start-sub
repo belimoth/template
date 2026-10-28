@@ -2,7 +2,7 @@
 
 start() {
 	echo testing $1
-	pushd $1 > /dev/null
+	pushd file/$1 > /dev/null
 
 	[[ -f "shell/start"   ]] && shell/start
 #	[[ -f "shell/install" ]] && shell/install
